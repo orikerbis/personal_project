@@ -42,7 +42,7 @@ pipeline {
         }
 
         stage('Deploy to EC2') {
-             steps {
+            steps {
                 sshagent (credentials: ['ec2-ssh-key']) {
                     sh """
                     ssh -o StrictHostKeyChecking=no ec2-user@${AWS_EC2_IP} \
@@ -53,6 +53,7 @@ pipeline {
                 }
             }
         }
+    }
 
     post {
         always {
