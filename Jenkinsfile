@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/orikerbis/personal_project.git'
+                git credentialsId: 'git2', url: 'https://github.com/orikerbis/personal_project.git'
             }
         }
 
