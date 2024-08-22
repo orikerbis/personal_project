@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'flask_app_personal'
-        AWS_EC2_IP = '54.87.208.131'
+        AWS_EC2_IP = '54.90.62.77'
     }
 
     stages {
