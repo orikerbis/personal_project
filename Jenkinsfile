@@ -35,6 +35,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-token') {
+                        sh "docker tag ${DOCKER_IMAGE}:${BUILD_ID} orikerbis/${DOCKER_IMAGE}:${BUILD_ID}"
                         dockerImage.push("${BUILD_ID}")
                     }
                 }
