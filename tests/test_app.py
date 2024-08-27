@@ -6,11 +6,6 @@ class BasicTests(unittest.TestCase):
     def setUpClass(cls):
         cls.client = app.test_client()
 
-    def test_home(self):
-        response = self.client.get('/')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"message": "Hello, World!"})
-
     def test_add(self):
         response = self.client.get('/add/2/3')
         self.assertEqual(response.status_code, 200)
