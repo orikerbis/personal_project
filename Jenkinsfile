@@ -5,7 +5,7 @@ pipeline {
         string(name: 'DOCKER_IMAGE', defaultValue: 'flaskapp_personal', description: 'Docker image name')
         string(name: 'DOCKERHUB_USERNAME', defaultValue: 'orikerbis', description: 'Docker Hub username')
         string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Git branch to build')
-        string(name: 'AWS_EC2_IP', defaultValue: '34.239.114.212', description: 'EC2 instance IP address')
+        string(name: 'AWS_EC2_IP', defaultValue: '18.206.146.186', description: 'EC2 instance IP address')
     }
 
     environment {
