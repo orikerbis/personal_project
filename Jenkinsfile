@@ -83,7 +83,6 @@ pipeline {
                     # Pull the latest image and run the new container
                     docker pull ${params.DOCKERHUB_USERNAME}/${params.DOCKER_IMAGE}:${BUILD_ID}
                     docker run -d --platform linux/amd64 -p 80:5000 ${params.DOCKERHUB_USERNAME}/${params.DOCKER_IMAGE}:${BUILD_ID}
-                    EOF
                     """
                 }
             }
